@@ -37,12 +37,15 @@ import { PropType } from 'vue'
         mounted() {
             let img = new Image()
             img.onload = () => {
-                const dif = 0.3
+                const difX = 0.25
+                const difY = 0.15
                 const width:number = img.naturalWidth
                 const height: number = img.naturalHeight
                 const calc: number = width/height
-                this.ratio = (calc>=1-dif && calc<=1+dif) ? 1 : calc > 1+dif ? 2 : 0.5
-            }
+                this.ratio = (calc>=1-difY && calc<=1+difX) ? 1 : calc > 1+difY ? 2 : 0.5
+                console.log(calc)
+                console.log(this.ratio)
+            }   
             img.src = this.image.link
         },
         methods: {
