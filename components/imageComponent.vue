@@ -37,7 +37,7 @@ import { PropType } from 'vue'
         mounted() {
             let img = new Image()
             img.onload = () => {
-                const dif = 0.35
+                const dif = 0.3
                 const width:number = img.naturalWidth
                 const height: number = img.naturalHeight
                 const calc: number = width/height
