@@ -43,8 +43,6 @@ import { PropType } from 'vue'
                 const height: number = img.naturalHeight
                 const calc: number = width/height
                 this.ratio = (calc>=1-difY && calc<=1+difX) ? 1 : calc > 1+difY ? 2 : 0.5
-                console.log(calc)
-                console.log(this.ratio)
             }   
             img.src = this.image.link
         },
